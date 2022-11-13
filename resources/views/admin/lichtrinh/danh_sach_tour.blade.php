@@ -21,15 +21,20 @@
                             aria-label="Position: activate to sort column ascending">Ảnh
                         </th>
                         <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
-                            aria-label="Country: activate to sort column ascending">Tên bài
-                            viết
+                            aria-label="Country: activate to sort column ascending">Tên tour
                         </th>
                         <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
-                            aria-label="Status: activate to sort column ascending">Tác giả
+                            aria-label="Status: activate to sort column ascending">Giá
                         </th>
 
                         <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
-                            aria-label="Role: activate to sort column ascending">Ngày tạo
+                            aria-label="Role: activate to sort column ascending">Thời gian
+                        </th>
+                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                            aria-label="Role: activate to sort column ascending">Ngày khởi hành
+                        </th>
+                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                            aria-label="Role: activate to sort column ascending">Phương tiện
                         </th>
                         <th class="sorting_disabled" rowspan="1" colspan="1" aria-label=""
                         >Hành động
@@ -50,31 +55,33 @@
                                 @endif
                             </td>
                             <td>
-                                {{--                                <img src="{{asset('storage/images/'.$item->blog_image)}}" alt="" style="width: 80px;height: 80px">--}}
-                                {{--                                <img src="{{ $item->blog_image }}" alt="" style="width: 80px;height: 80px">--}}
-                                @if(preg_match_all('((http|https)\:\/\/)',$item->blog_image))
-                                    <img src="{{ $item->blog_image }}" alt="" style="width: 80px;height: 80px">
+                                {{--                                <img src="{{asset('storage/images/'.$item->tour_image)}}" alt="" style="width: 80px;height: 80px">--}}
+                                {{--                                <img src="{{ $item->tour_image }}" alt="" style="width: 80px;height: 80px">--}}
+                                @if(preg_match_all('((http|https)\:\/\/)',$item->tour_image))
+                                    <img src="{{ $item->tour_image }}" alt="" style="width: 80px;height: 80px">
                                 @else
-                                    <img src="{{asset('images/'.$item->blog_image)}}" alt=""
+                                    <img src="{{asset('images/'.$item->tour_image)}}" alt=""
                                          style="width: 80px;height: 80px">
                                 @endif
 
                             </td>
 
-                            <td>{{ $item->blog_title }}</td>
+                            <td>{{ $item->tour_title }}</td>
 
-                            <td> {{ $item->display_name }}</td>
+                            <td> {{ $item->tour_cost }}</td>
 
-                            <td>{{$item->blog_date}}</td>
+                            <td>{{$item->tour_time}}</td>
+                            <td>{{$item->tour_date}}</td>
+                            <td>{{$item->tour_vehicle}}</td>
                             <td>
                                 @if(session()->get('role')[0] == 'admin' || session()->get('role')[0] == 'user')
                                     <a class="btn btn-sm btn-white"
-                                       href="{{route('suaBV',['id'=>$item->id])}}">
+                                       href="{{route('suaTour',['id'=>$item->id])}}">
                                         <i class="tio-edit"></i> Edit
                                     </a>
                                 @endif
                                 @if(session()->get('role')[0] == 'admin')
-                                    <a class="btn btn-sm btn-white" href="{{route('xoaBV',['id'=>$item->id])}}"
+                                    <a class="btn btn-sm btn-white" href="{{route('xoaTour',['id'=>$item->id])}}"
                                        onclick="return confirm('Bạn có chắc không?')">
                                         Delete
                                     </a>

@@ -29,7 +29,6 @@ Route::prefix('/admin')->group(function () {
     Route::get('/sua-bai-viet/{id}', 'Admin\BaiVietController@suaBaiViet')->name('suaBV');
     Route::post('/sua-bai-viet', 'Admin\BaiVietController@updateBaiViet')->name('updateBV');
     Route::get('xoa-bai-viet/{id}', 'Admin\BaiVietController@xoaBaiViet')->name('xoaBV');
-    Route::get('/tim-kiem', 'Admin\BaiVietController@timBaiViet')->name('timkiemBV');
     Route::get('/login', 'Admin\UsersController@view_login')->name('view_login');
     Route::post('/action-login', 'Admin\UsersController@action_login')->name('action_login');
     Route::get('/action-logout', 'Admin\UsersController@action_logout')->name('action_logout');
@@ -40,10 +39,20 @@ Route::prefix('/admin')->group(function () {
     Route::post('/edit-user', 'Admin\UsersController@edit_user')->name('edit_user');
     Route::get('/delete-user/{id}', 'Admin\UsersController@delete_user')->name('delete_user');
     Route::get('/find-user', 'Admin\UsersController@find_user')->name('find_user');
-
+    Route::get('/index-tour', 'Admin\LichTrinhController@danhSachTour')->name('danhSachTour');
+    Route::get('/them-tour', 'Admin\LichTrinhController@themTour')->name('themTour');
+    Route::post('/them-tour', 'Admin\LichTrinhController@luuTour')->name('luuTour');
+    Route::get('/sua-tour/{id}', 'Admin\LichTrinhController@suaTour')->name('suaTour');
+    Route::post('/sua-tour', 'Admin\LichTrinhController@updateTour')->name('updateTour');
+    Route::get('xoa-tour/{id}', 'Admin\LichTrinhController@xoaTour')->name('xoaTour');
 });
 Route::prefix('/')->group(function () {
-    Route::get('/','BlogController@index');
+    Route::get('/blog','BlogController@index');
+    Route::get('/tour','TourController@index');
+    Route::get('/tour-detail/{slug}','TourController@tour_detail')->name('tour_detail');
+    Route::get('/',function (){
+        return view('welcome');
+    });
 
 });
 //Route::get('/rd/xml/a/genrate-sitemap', function () {

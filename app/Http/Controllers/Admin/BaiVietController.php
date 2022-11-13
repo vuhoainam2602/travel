@@ -27,11 +27,8 @@ class BaiVietController
     {
 
         try {
-            $posts = DB::table('hwp_blog')
-                ->orderBy('hwp_blog.ID', 'desc')
-                ->get()->toArray();
             $users = DB::table('hwp_user')->select("ID", "user_login")->get()->toArray();
-            return view('admin.baiviet.them_bai_viet', compact("users", 'posts'));
+            return view('admin.baiviet.them_bai_viet', compact("users", ));
         } catch (\Exception $e) {
             return abort(404);
         }
@@ -170,31 +167,6 @@ class BaiVietController
         return redirect()->back();
     }
 
-    public function timBaiViet(Request $request)
-    {
-        try {
-            $ses = $request->session()->get('tk_user');
-            if (isset($ses)) {
-                $index = 1;
-                if (isset($_GET['s']) && strlen($_GET['s']) >= 1) {
-                    $search_text = $_GET['s'];
-                    $ds_bai_viet = DB::table('hwp_blog')
-                        ->select('hwp_blog.id','hwp_blog.blog_date','hwp_blog.blog_title','hwp_blog.blog_content','hwp_blog.blog_author','hwp_blog.blog_image','hwp_user.display_name','hwp_user.role')
-                        ->join('hwp_user','hwp_user.id','=','hwp_blog.blog_author')
-                        ->where('hwp_blog.blog_title', 'like', '%' . $search_text . '%')
-                        ->orderBy('hwp_blog.id', 'desc')->paginate(15);
-                    Session::put('tasks_url',$request->fullUrl());
-                    return view("admin.baiviet.danh_sach_bai_viet", compact('search_text','ds_bai_viet', 'index'));
-                }
-            } else {
-                return redirect('/admin/login');
-
-            }
-
-        } catch (\Exception $e) {
-            return abort(404);
-        }
-    }
 
 
 }

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{Request::root().'/css/css_client/animate.min.css'}}"/>
     <link rel="stylesheet" href="{{Request::root().'/css/css_client/jquery-ui.min.css'}}"/>
     <link rel="stylesheet" href="{{Request::root().'/css/css_client/style.css'}}"/>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     {{--    <link rel="stylesheet" href="./index_files/all.css">--}}
     {{--    <link rel="stylesheet" href="./index_files/bootstrap.min.css">--}}
     {{--    <link rel="stylesheet" href="./index_files/owl.carousel.min.css">--}}
@@ -24,6 +25,9 @@
     <style>
         .card{
             height: 580px;
+        }
+        .tour-rating{
+            background: #156d07!important;
         }
     </style>
 
@@ -44,17 +48,17 @@
                     <nav class="navbar">
                         <ul class="nav-list">
                             <li class="nav-item active">
-                                <a href="./index.html" class="nav-link">
+                                <a href="{{Request::root().'/'}}" class="nav-link">
                                     home
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./tours.html" class="nav-link">
+                                <a href="{{Request::root().'/tour'}}" class="nav-link">
                                     tours
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./blog.html" class="nav-link">
+                                <a href="{{Request::root().'/blog'}}" class="nav-link">
                                     blog
                                 </a>
                             </li>

@@ -564,7 +564,7 @@
   margin: 0 20px 10px 0;
 }
 .tour-card .card-body .tour-tags span.tour-rating {
-  background: #FDC703;
+  background: #03c3fd;
 }
 .tour-card h6 {
   transition: all 0.3s ease-in-out;
@@ -1890,7 +1890,7 @@
   margin: 0;
 }
 .tour-body .tour-tags span.tour-rating {
-  background: #FDC703;
+  background: #fd3d03;
   padding: 4px 19px;
   font-size: 14px;
   line-height: 14px;

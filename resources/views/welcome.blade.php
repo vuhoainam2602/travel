@@ -1,163 +1,492 @@
-<!DOCTYPE html>
-<!-- saved from url=(0028)./ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+@extends('layouts.layout')
+@section("main")
+    <main class="main">
+        <section class="banner">
+            <div class="banner-slide owl-carousel owl-theme owl-loaded owl-drag">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel</title>
-    <link rel="stylesheet" href="{{Request::root().'/images/favicon.png'}}"/>
-    <link rel="stylesheet" href="{{Request::root().'/css/css_client/all.css'}}"/>
-    <link rel="stylesheet" href="{{Request::root().'/css/css_client/bootstrap.min.css'}}"/>
-    <link rel="stylesheet" href="{{Request::root().'/css/css_client/owl.carousel.min.css'}}"/>
-    <link rel="stylesheet" href="{{Request::root().'/css/css_client/owl.theme.default.css'}}"/>
-    <link rel="stylesheet" href="{{Request::root().'/css/css_client/animate.min.css'}}"/>
-    <link rel="stylesheet" href="{{Request::root().'/css/css_client/jquery-ui.min.css'}}"/>
-    <link rel="stylesheet" href="{{Request::root().'/css/css_client/style.css'}}"/>
-{{--    <link rel="stylesheet" href="./index_files/all.css">--}}
-{{--    <link rel="stylesheet" href="./index_files/bootstrap.min.css">--}}
-{{--    <link rel="stylesheet" href="./index_files/owl.carousel.min.css">--}}
-{{--    <link rel="stylesheet" href="./index_files/owl.theme.default.css">--}}
-{{--    <link rel="stylesheet" href="./index_files/animate.min.css">--}}
-{{--    <link rel="stylesheet" href="./index_files/jquery-ui.min.css">--}}
-{{--    <link rel="stylesheet" href="./index_files/jquery.fancybox.css">--}}
-{{--    <link rel="stylesheet" href="./index_files/style.css">--}}
 
-</head>
+                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-9247px, 0px, 0px); transition: all 1.2s ease 0s; width: 23119px;"><div class="owl-item cloned" style="width: 1531.2px; margin-right: 10px;"><div class="banner-item">
+                                <div class="banner-caption">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="hero-text">
+                                                    <h3 class="animate__animated animate__fadeInleft">
+                                                        Explore Your Travel
+                                                    </h3>
+                                                    <h1 class="animate__animated animate__fadeInLeft">
+                                                        We feel travel!
+                                                    </h1>
+                                                    <p class="animate__animated animate__fadeInLeft">
+                                                        I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
+                                                    </p>
+                                                    <div class="banner-button-group">
+                                                        <a href="./contact.html" class="btn btn-primary animate__animated animate__fadeInUp">
+                                                            Contact Us
+                                                        </a>
+                                                        <a href="./tours.html" class="btn btn-primary learn-more animate__animated animate__fadeInUp">
+                                                            Learn More
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{Request::root().'/images/slide-1.png'}}" alt="" class="banner-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div><div class="owl-item cloned" style="width: 1531.2px; margin-right: 10px;"><div class="banner-item">
+                                <div class="banner-caption">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="hero-text">
+                                                    <h3 class="animate__animated animate__fadeInRight">
+                                                        Explore Your Travel
+                                                    </h3>
+                                                    <h1 class="animate__animated animate__fadeInRight">
+                                                        Start planning your dream trip today!
+                                                    </h1>
+                                                    <p class="animate__animated animate__fadeInRight">
+                                                        I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
+                                                    </p>
+                                                    <div class="banner-button-group">
+                                                        <a href="./contact.html" class="btn btn-primary animate__animated animate__fadeInUp">
+                                                            Contact Us
+                                                        </a>
+                                                        <a href="./tours.html" class="btn btn-primary learn-more animate__animated animate__fadeInUp">
+                                                            Learn More
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{Request::root().'/images/slide-1.png'}}" alt="" class="banner-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div><div class="owl-item cloned" style="width: 1531.2px; margin-right: 10px;"><div class="banner-item">
+                                <div class="banner-caption">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="hero-text">
+                                                    <h3 class="animate__animated animate__fadeInDown">
+                                                        Explore Your Travel
+                                                    </h3>
+                                                    <h1 class="animate__animated animate__fadeInUp">
+                                                        Start planning your dream trip today!
+                                                    </h1>
+                                                    <p class="animate__animated animate__fadeInUp">
+                                                        I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
+                                                    </p>
+                                                    <div class="banner-button-group">
+                                                        <a href="./contact.html" class="btn btn-primary animate__animated animate__fadeInUp">
+                                                            Contact Us
+                                                        </a>
+                                                        <a href="./tours.html" class="btn btn-primary learn-more animate__animated animate__fadeInUp">
+                                                            Learn More
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{Request::root().'/images/slide-1.png'}}" alt="" class="banner-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div><div class="owl-item cloned" style="width: 1531.2px; margin-right: 10px;"><div class="banner-item">
+                                <div class="banner-caption">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="hero-text">
+                                                    <h3 class="animate__animated animate__fadeInleft">
+                                                        Explore Your Travel
+                                                    </h3>
+                                                    <h1 class="animate__animated animate__fadeInLeft">
+                                                        Start planning your dream trip today!
+                                                    </h1>
+                                                    <p class="animate__animated animate__fadeInLeft">
+                                                        I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
+                                                    </p>
+                                                    <div class="banner-button-group">
+                                                        <a href="./contact.html" class="btn btn-primary animate__animated animate__fadeInUp">
+                                                            Contact Us
+                                                        </a>
+                                                        <a href="./tours.html" class="btn btn-primary learn-more animate__animated animate__fadeInUp">
+                                                            Learn More
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{Request::root().'/images/slide-1.png'}}" alt="" class="banner-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div><div class="owl-item" style="width: 1531.2px; margin-right: 10px;"><div class="banner-item">
+                                <div class="banner-caption">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="hero-text">
+                                                    <h3 class="animate__animated animate__fadeInDown">
+                                                        Explore Your Travel
+                                                    </h3>
+                                                    <h1 class="animate__animated animate__fadeInUp">
+                                                        Start planning your dream trip today!
+                                                    </h1>
+                                                    <p class="animate__animated animate__fadeInUp">
+                                                        I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
+                                                    </p>
+                                                    <div class="banner-button-group">
+                                                        <a href="./contact.html" class="btn btn-primary animate__animated animate__fadeInUp">
+                                                            Contact Us
+                                                        </a>
+                                                        <a href="./tours.html" class="btn btn-primary learn-more animate__animated animate__fadeInUp">
+                                                            Learn More
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{Request::root().'/images/slide-1.png'}}" alt="" class="banner-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div><div class="owl-item" style="width: 1531.2px; margin-right: 10px;"><div class="banner-item">
+                                <div class="banner-caption">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="hero-text">
+                                                    <h3 class="animate__animated animate__fadeInleft">
+                                                        Explore Your Travel
+                                                    </h3>
+                                                    <h1 class="animate__animated animate__fadeInLeft">
+                                                        We feel travel!
+                                                    </h1>
+                                                    <p class="animate__animated animate__fadeInLeft">
+                                                        I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
+                                                    </p>
+                                                    <div class="banner-button-group">
+                                                        <a href="./contact.html" class="btn btn-primary animate__animated animate__fadeInUp">
+                                                            Contact Us
+                                                        </a>
+                                                        <a href="./tours.html" class="btn btn-primary learn-more animate__animated animate__fadeInUp">
+                                                            Learn More
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{Request::root().'/images/slide-1.png'}}" alt="" class="banner-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div><div class="owl-item active" style="width: 1531.2px; margin-right: 10px;"><div class="banner-item">
+                                <div class="banner-caption">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="hero-text">
+                                                    <h3 class="animate__animated animate__fadeInRight">
+                                                        Explore Your Travel
+                                                    </h3>
+                                                    <h1 class="animate__animated animate__fadeInRight">
+                                                        Start planning your dream trip today!
+                                                    </h1>
+                                                    <p class="animate__animated animate__fadeInRight">
+                                                        I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
+                                                    </p>
+                                                    <div class="banner-button-group">
+                                                        <a href="./contact.html" class="btn btn-primary animate__animated animate__fadeInUp">
+                                                            Contact Us
+                                                        </a>
+                                                        <a href="./tours.html" class="btn btn-primary learn-more animate__animated animate__fadeInUp">
+                                                            Learn More
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{Request::root().'/images/slide-1.png'}}" alt="" class="banner-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div><div class="owl-item cloned" style="width: 1531.2px; margin-right: 10px;"><div class="banner-item">
+                                <div class="banner-caption">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="hero-text">
+                                                    <h3 class="animate__animated animate__fadeInleft">
+                                                        Explore Your Travel
+                                                    </h3>
+                                                    <h1 class="animate__animated animate__fadeInLeft">
+                                                        We feel travel!
+                                                    </h1>
+                                                    <p class="animate__animated animate__fadeInLeft">
+                                                        I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
+                                                    </p>
+                                                    <div class="banner-button-group">
+                                                        <a href="./contact.html" class="btn btn-primary animate__animated animate__fadeInUp">
+                                                            Contact Us
+                                                        </a>
+                                                        <a href="./tours.html" class="btn btn-primary learn-more animate__animated animate__fadeInUp">
+                                                            Learn More
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="./about.jpg" alt="" class="banner-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div><div class="owl-item cloned" style="width: 1531.2px; margin-right: 10px;"><div class="banner-item">
+                                <div class="banner-caption">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="hero-text">
+                                                    <h3 class="animate__animated animate__fadeInRight">
+                                                        Explore Your Travel
+                                                    </h3>
+                                                    <h1 class="animate__animated animate__fadeInRight">
+                                                        Start planning your dream trip today!
+                                                    </h1>
+                                                    <p class="animate__animated animate__fadeInRight">
+                                                        I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
+                                                    </p>
+                                                    <div class="banner-button-group">
+                                                        <a href="./contact.html" class="btn btn-primary animate__animated animate__fadeInUp">
+                                                            Contact Us
+                                                        </a>
+                                                        <a href="./tours.html" class="btn btn-primary learn-more animate__animated animate__fadeInUp">
+                                                            Learn More
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{Request::root().'/images/slide-1.png'}}" alt="" class="banner-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div><div class="owl-item cloned" style="width: 1531.2px; margin-right: 10px;"><div class="banner-item">
+                                <div class="banner-caption">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="hero-text">
+                                                    <h3 class="animate__animated animate__fadeInDown">
+                                                        Explore Your Travel
+                                                    </h3>
+                                                    <h1 class="animate__animated animate__fadeInUp">
+                                                        Start planning your dream trip today!
+                                                    </h1>
+                                                    <p class="animate__animated animate__fadeInUp">
+                                                        I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
+                                                    </p>
+                                                    <div class="banner-button-group">
+                                                        <a href="./contact.html" class="btn btn-primary animate__animated animate__fadeInUp">
+                                                            Contact Us
+                                                        </a>
+                                                        <a href="./tours.html" class="btn btn-primary learn-more animate__animated animate__fadeInUp">
+                                                            Learn More
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{Request::root().'/images/slide-1.png'}}" alt="" class="banner-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div><div class="owl-item cloned" style="width: 1531.2px; margin-right: 10px;"><div class="banner-item">
+                                <div class="banner-caption">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="hero-text">
+                                                    <h3 class="animate__animated animate__fadeInleft">
+                                                        Explore Your Travel
+                                                    </h3>
+                                                    <h1 class="animate__animated animate__fadeInLeft">
+                                                        We feel travel!
+                                                    </h1>
+                                                    <p class="animate__animated animate__fadeInLeft">
+                                                        I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
+                                                    </p>
+                                                    <div class="banner-button-group">
+                                                        <a href="./contact.html" class="btn btn-primary animate__animated animate__fadeInUp">
+                                                            Contact Us
+                                                        </a>
+                                                        <a href="./tours.html" class="btn btn-primary learn-more animate__animated animate__fadeInUp">
+                                                            Learn More
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{Request::root().'/images/slide-1.png'}}" alt="" class="banner-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+            <div class="shape1 d-none d-lg-block">
+                <img src="./index_files/banner-shape1.png" alt="">
+            </div>
+            <div class="shape2 d-none d-lg-block">
+                <img src="./index_files/banner-shape2.png" alt="">
+            </div>
+            <div class="shape3 d-none d-lg-block">
+                <img src="./index_files/banner-shape3.png" alt="">
+            </div>
+        </section>
 
-<body>
-<div class="wrapper">
-    <header class="header">
-        <div class="container">
-            <div class="header-main">
-                <a href="./index.html" class="header-logo">
-                    <img src="{{Request::root().'/images/favicon.png'}}" alt="" width = "80" height = "80">
-                </a>
-                <button class="navbar-toggler">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse flex-grow-1 collapse">
-                    <nav class="navbar">
-                        <ul class="nav-list">
-                            <li class="nav-item active">
-                                <a href="./index.html" class="nav-link">
-                                    home
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./tours.html" class="nav-link">
-                                    tours
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./blog.html" class="nav-link">
-                                    blog
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+        <section class="destination inverse-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h3 class="mt-n6">Destinations</h3>
+                            <h2 class="mb-0">Choose Your Place</h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" data-cues="slideInLeft">
+                    <div class="col-md-6 col-12 animate__animated animate__slideInLeft">
+                        <div class="destination-item">
+                            <a href="./">
+                                <img src="./index_files/desti1.png" alt="">
+                                <div class="info-overlay">
+                                    <h4>Malé</h4>
+                                    <h3>Maldives</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 animate__animated animate__slideInLeft">
+                        <div class="destination-item">
+                            <a href="./">
+                                <img src="./index_files/desti2.png" alt="">
+                                <div class="info-overlay">
+                                    <h4>Bangkok</h4>
+                                    <h3>Thailand</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 animate__animated animate__slideInLeft">
+                        <div class="destination-item">
+                            <a href="./">
+                                <img src="./index_files/desti3.png" alt="">
+                                <div class="info-overlay">
+                                    <h4>Kuala Lumpur</h4>
+                                    <h3>Malaysia</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 animate__animated animate__slideInLeft">
+                        <div class="destination-item">
+                            <a href="./">
+                                <img src="./index_files/desti4.png" alt="">
+                                <div class="info-overlay">
+                                    <h4>Kathmandu</h4>
+                                    <h3>Nepal</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 animate__animated animate__slideInLeft">
+                        <div class="destination-item">
+                            <a href="./">
+                                <img src="./index_files/desti5.png" alt="">
+                                <div class="info-overlay">
+                                    <h4>Jakarta</h4>
+                                    <h3>Indonesia</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 animate__animated animate__slideInUp">
-                    <div class="footer-widget">
-                        <h5>Top destination</h5>
-                        <ul>
-                            <li>
-                                <a href="./#">Indonesia, Jakarta</a>
-                            </li>
-                            <li>
-                                <a href="./#">Maldives, Malé</a>
-                            </li>
-                            <li>
-                                <a href="./#">Australia, Canberra</a>
-                            </li>
-                            <li>
-                                <a href="./#">Thailand, Bangkok</a>
-                            </li>
-                            <li>
-                                <a href="./#">Morocco, Rabat</a>
-                            </li>
-                        </ul>
+        <section class="section-spacing about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-5">
+                        <div class="section-title mb-0">
+                            <h3 class="mt-n6 animate__animated animate__slideInUp">About us</h3>
+                            <h2 class=" animate__animated animate__slideInUp">Explore all tour of the world with us.</h2>
+                        </div>
+                        <p class=" animate__animated animate__slideInUp">
+                            Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        </p>
+                        <div class="about-info animate__animated animate__slideInLeft">
+                            <div class="about-info__item animate__animated animate__slideInleft">
+                                <div class="about-icon">
+                                        <span class="media-icon">
+                                            <i class="fa-regular fa-compass"></i>
+                                        </span>
+                                </div>
+                                <div class="about-text">
+                                    <h5 class="mt-0">Tour guide</h5>
+                                    <p>Lorem Ipsum available, but the majority have suffered alteration in some.</p>
+                                </div>
+                            </div>
+                            <div class="about-info__item animate__animated animate__slideInLeft">
+                                <div class="about-icon">
+                                        <span class="media-icon">
+                                            <i class="fa-solid fa-briefcase"></i>
+                                        </span>
+                                </div>
+                                <div class="about-text">
+                                    <h5 class="mt-0">Friendly price</h5>
+                                    <p>Lorem Ipsum available, but the majority have suffered alteration in some.</p>
+                                </div>
+                            </div>
+                            <div class="about-info__item animate__animated animate__slideInLeft">
+                                <div class="about-icon">
+                                        <span class="media-icon">
+                                            <i class="fa-solid fa-umbrella-beach"></i>
+                                        </span>
+                                </div>
+                                <div class="about-text">
+                                    <h5 class="mt-0">Reliable tour</h5>
+                                    <p>Lorem Ipsum available, but the majority have suffered alteration in some.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cta-button animate__animated animate__slideInUp">
+                            <a href="./booking.html" class="btn btn-primary">Booking Now</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-2 col-md-6 animate__animated animate__slideInUp">
-                    <div class="footer-widget">
-                        <h5>Categories</h5>
-                        <ul>
-                            <li>
-                                <a href="./#">Travel</a>
-                            </li>
-                            <li>
-                                <a href="./#">Lifestyle</a>
-                            </li>
-                            <li>
-                                <a href="./#">Fashion</a>
-                            </li>
-                            <li>
-                                <a href="./#">Education</a>
-                            </li>
-                            <li>
-                                <a href="./#">Food &amp; Drink</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 animate__animated animate__slideInUp">
-                    <div class="footer-widget">
-                        <h5>Quick links</h5>
-                        <ul>
-                            <li>
-                                <a href="#">About</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
-                            <li>
-                                <a href="#">Tours</a>
-                            </li>
-                            <li>
-                                <a href="#">Booking</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6 animate__animated animate__slideInUp">
-                    <div class="footer-widget">
-                        <h5>Get a newsletter</h5>
-                        <p>For the latest deals and tips, travel no further than your inbox</p>
-                        <form action="./" class="subcribe-form">
-                            <input type="text" class="form-control" placeholder="Email address">
-                            <button type="submit">Subscribe</button>
-                        </form>
+                    <div class="col-md-12 col-lg-7">
+                        <div class="about-right">
+                            <img src="{{Request::root().'/images/ab1.png'}}" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-</div>
-<a href="./#" class="scrollup">
-    <i class="fa-sharp fa-solid fa-angle-up"></i>
-</a>
+        </section>
 
-<script src="./index_files/jquery-3.6.0.min.js.tải xuống"></script>
-<script src="./index_files/bootstrap.min.js.tải xuống"></script>
-<script src="./index_files/jquery-ui.min.js.tải xuống"></script>
-<script src="./index_files/jquery-migrate.min.js.tải xuống"></script>
-<script src="./index_files/owl.carousel.min.js.tải xuống"></script>
-<script src="./index_files/jquery.fancybox.min.js.tải xuống"></script>
-<script src="./index_files/jquery.waypoints.min.js.tải xuống"></script>
-<script src="./index_files/jquery.counterup.min.js.tải xuống"></script>
-<script src="./index_files/wow.min.js.tải xuống"></script>
-<script src="./index_files/style.js.tải xuống"></script>
-<script>
-    new WOW().init();
-</script>
-
-
-
-</body></html>
+    </main>
+@endsection
