@@ -45,10 +45,13 @@ Route::prefix('/admin')->group(function () {
     Route::get('/sua-tour/{id}', 'Admin\LichTrinhController@suaTour')->name('suaTour');
     Route::post('/sua-tour', 'Admin\LichTrinhController@updateTour')->name('updateTour');
     Route::get('xoa-tour/{id}', 'Admin\LichTrinhController@xoaTour')->name('xoaTour');
+    Route::get('/index-contact', 'ContactController@danhSachLienHe')->name('danhSachLH');
 });
 Route::prefix('/')->group(function () {
     Route::get('/blog','BlogController@index');
     Route::get('/tour','TourController@index');
+    Route::get('/contact','ContactController@index');
+    Route::post('/contact','ContactController@contact')->name('contact');
     Route::get('/tour-detail/{slug}','TourController@tour_detail')->name('tour_detail');
     Route::get('/',function (){
         return view('welcome');

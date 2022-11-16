@@ -40,9 +40,11 @@
         select {
             width: 527px;
         }
+
         .navbar-vertical-aside .navbar-brand-wrapper {
             height: auto;
         }
+
         input {
             width: 100%;
             padding: 12px;
@@ -229,26 +231,6 @@
     <div class="navbar-vertical-container">
         <div class="navbar-vertical-footer-offset">
             <div class="navbar-brand-wrapper justify-content-between">
-                <!-- Logo -->
-
-                <a class="navbar-brand" href="{{Request::root().'/admin'}}" aria-label="Front">
-                    <img
-                        class="navbar-brand-logo"
-                        src="{{Request::root().'/images/favicon.png'}}"
-                        alt="Logo"
-                    />
-                </a>
-
-                <!-- End Logo -->
-
-                <!-- Navbar Vertical Toggle -->
-                <button
-                    type="button"
-                    class="js-navbar-vertical-aside-toggle-invoker navbar-vertical-aside-toggle btn btn-icon btn-xs btn-ghost-dark"
-                >
-                    <i class="tio-clear tio-lg"></i>
-                </button>
-                <!-- End Navbar Vertical Toggle -->
             </div>
 
             <!-- Content -->
@@ -268,6 +250,19 @@
                             >Quản lý bài viết
                    </span>
                         </a>
+                        <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link "
+                                    href="{{Request::root().'/admin/'}}"
+                                    title="Kanban"
+                                >
+                                    <span class="tio-circle nav-indicator-icon"></span>
+                                    <span class="text-truncate">Danh sách bài viết</span>
+                                </a>
+                            </li>
+
+                        </ul>
 
                         <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
                             <li class="nav-item">
@@ -338,6 +333,18 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link "
+                                    href="{{Request::root().'/admin/index-user'}}"
+                                    title="Calendar"
+                                >
+                                    <span class="tio-circle nav-indicator-icon"></span>
+                                    <span class="text-truncate"
+                                    >Danh sách user
+                        </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link "
                                     href="{{Request::root().'/admin/them-user'}}"
                                     title="Kanban"
                                 >
@@ -345,23 +352,26 @@
                                     <span class="text-truncate">Thêm user</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link "
-                                    href="{{Request::root().'/admin/index-user'}}"
-                                    title="Calendar"
-                                >
-                                    <span class="tio-circle nav-indicator-icon"></span>
-                                    <span class="text-truncate"
-                                    >Danh sách user
-                        <span class="badge badge-info badge-pill ml-1"
-                        >New</span
-                        ></span
-                                    >
-                                </a>
-                            </li>
+
 
                         </ul>
+
+                    </li>
+                    <li class="navbar-vertical-aside-has-menu ">
+                        <a
+                            class="nav-link"
+                            href="{{Request::root().'/admin/index-contact'}}"
+                            title="Apps"
+                        >
+
+                            <span
+                                class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate"
+                            >Danh sách liên lạc
+                    </span>
+                        </a>
+
+
+
                     </li>
                     <li class="navbar-vertical-aside-has-menu text-center ">
                         <a href="{{route('action_logout')}}" class="btn btn-primary pt-1 pb-1 pr-2 pl-2">Logout</a>
@@ -679,14 +689,13 @@
         // if(e.target.value.length > max){
         //     alert("Bạn nhập quá số ký tự quy định");
         // }
-        count.innerHTML =  e.target.value.length;
+        count.innerHTML = e.target.value.length;
     };
 
     mo_ta.onkeyup = (e) => {
 
-        count1.innerHTML =  e.target.value.length;
+        count1.innerHTML = e.target.value.length;
     };
-
 
 
 </script>

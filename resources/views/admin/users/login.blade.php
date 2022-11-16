@@ -52,15 +52,11 @@
 
     <!-- Content -->
     <div class="container py-5 py-sm-7">
-        <a class="d-flex justify-content-center mb-5" href="index.html">
-            <img class="z-index-2" src="{{Request::root().'/images/favicon.png'}}" alt="Image Description" style="width: 8rem;">
-        </a>
-
         <div class="row justify-content-center">
             <div class="col-md-7 col-lg-5">
                 <!-- Card -->
-                <div class="card card-lg mb-5">
-                    <div class="card-body">
+                <div class="">
+                    <div class="">
                         <!-- Form -->
                         <form class="js-validate" action="{{Request::root().'/admin/action-login'}}" method="post" novalidate="novalidate">
                             @csrf
@@ -88,7 +84,6 @@
                                 <label class="input-label" for="signupSrPassword" tabindex="0">
                         <span class="d-flex justify-content-between align-items-center">
                           Password
-                          <a class="input-label-secondary" href="authentication-reset-password-basic.html">Forgot Password?</a>
                         </span>
                                 </label>
 
@@ -106,16 +101,6 @@
                             </div>
                             <!-- End Form Group -->
 
-                            <!-- Checkbox -->
-                            <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="termsCheckbox"
-                                           name="termsCheckbox">
-                                    <label class="custom-control-label text-muted" for="termsCheckbox"> Remember
-                                        me</label>
-                                </div>
-                            </div>
-                            <!-- End Checkbox -->
 
                             <button type="submit" class="btn btn-lg btn-block btn-primary">Sign in</button>
                         </form>

@@ -4,7 +4,7 @@
 
     <div class="col-lg-12">
         <!-- Card -->
-        <div class="card card-lg mb-3 mb-lg-5">
+        <div class=" mb-3 mb-lg-5">
             <form action="{{route('luuBV')}}" method="post" enctype="multipart/form-data">
             @csrf
             <!-- Header -->
@@ -52,8 +52,7 @@
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="nav-one-eg1" role="tabpanel"
                              aria-labelledby="nav-one-eg1-tab">
-                            <div class="row">
-                                <div class="col-6">
+
                                     <!-- Form Group -->
                                     <div class="form-group">
                                         <label for="tieu_de" class="input-label">Tiêu đề bài
@@ -74,9 +73,9 @@
                                         </div>
                                     </div>
                                     <!-- End Form Group -->
-                                </div>
 
-                                <div class="col-6">
+
+
                                     <!-- Form Group -->
                                     <div class="form-group">
                                         <label for="projectNameProjectSettingsLabel" class="input-label">Slug <i
@@ -98,11 +97,9 @@
                                         </div>
                                     </div>
                                     <!-- End Form Group -->
-                                </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-6">
+
+
                                     <!-- Form Group -->
                                     <div class="form-group">
                                         <label for="projectNameProjectSettingsLabel" class="input-label">Tác giả<i
@@ -131,11 +128,11 @@
 
                                             </select>
                                         </div>
-                                    </div>
-                                    <!-- End Form Group -->
-                                </div>
 
-                                <div class="col-6">
+                                    <!-- End Form Group -->
+
+
+
                                     <!-- Form Group -->
                                     <div class="form-group">
                                         <label for="projectNameProjectSettingsLabel" class="input-label">Mô tả
@@ -154,7 +151,7 @@
                                     </div>
                                     <!-- End Form Group -->
                                 </div>
-                            </div>
+
 
 
                         </div>

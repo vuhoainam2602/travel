@@ -22,12 +22,16 @@
     {{--    <link rel="stylesheet" href="./index_files/jquery-ui.min.css">--}}
     {{--    <link rel="stylesheet" href="./index_files/jquery.fancybox.css">--}}
     {{--    <link rel="stylesheet" href="./index_files/style.css">--}}
+    <script src="https://kit.fontawesome.com/cda6c063bc.js" crossorigin="anonymous"></script>
     <style>
         .card{
             height: 580px;
         }
         .tour-rating{
             background: #156d07!important;
+        }
+        .contact-info{
+            justify-content: space-evenly!important;
         }
     </style>
 
@@ -60,6 +64,11 @@
                             <li class="nav-item">
                                 <a href="{{Request::root().'/blog'}}" class="nav-link">
                                     blog
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{Request::root().'/contact'}}" class="nav-link">
+                                    contact
                                 </a>
                             </li>
                         </ul>

@@ -12,31 +12,31 @@
                     <thead class="thead-light">
                     <tr role="row">
 
-                        <th class="table-column-pl-0 sorting text-center p-1 align-middle" tabindex="0"
+                        <th class="table-column-pl-0  text-center p-1 align-middle" tabindex="0"
                             aria-controls="datatable" rowspan="1"
                             colspan="1" aria-label="Name: activate to sort column ascending">
                             STT
                         </th>
-                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                        <th class="" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
                             aria-label="Position: activate to sort column ascending">Ảnh
                         </th>
-                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                        <th class="" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
                             aria-label="Country: activate to sort column ascending">Tên tour
                         </th>
-                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                        <th class="" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
                             aria-label="Status: activate to sort column ascending">Giá
                         </th>
 
-                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                        <th class="" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
                             aria-label="Role: activate to sort column ascending">Thời gian
                         </th>
-                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                        <th class="" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
                             aria-label="Role: activate to sort column ascending">Ngày khởi hành
                         </th>
-                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                        <th class="" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
                             aria-label="Role: activate to sort column ascending">Phương tiện
                         </th>
-                        <th class="sorting_disabled" rowspan="1" colspan="1" aria-label=""
+                        <th class="_disabled" rowspan="1" colspan="1" aria-label=""
                         >Hành động
                         </th>
                     </tr>

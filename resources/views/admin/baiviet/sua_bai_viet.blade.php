@@ -4,7 +4,7 @@
 
     <div class="col-lg-12">
         <!-- Card -->
-        <div class="card card-lg mb-3 mb-lg-5">
+        <div class=" mb-3 mb-lg-5">
             <form action="{{route('updateBV')}}" method="post" enctype="multipart/form-data">
             @csrf
             <!-- Header -->
@@ -59,120 +59,112 @@
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="nav-one-eg1" role="tabpanel"
                              aria-labelledby="nav-one-eg1-tab">
-                            <div class="row">
-                                <div class="col-6">
-                                    <!-- Form Group -->
-                                    <div class="form-group">
-                                        <label for="projectNameProjectSettingsLabel" class="input-label">Tiêu đề bài
-                                            viết
-                                        </label>
 
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">
-                                                    <i class="tio-briefcase-outlined"></i>
-                                                </div>
-                                            </div>
-                                            <input type="text" class="form-control" name="tieu_de"
-                                                   id="projectNameProjectSettingsLabel" placeholder="Tiêu đề"
-                                                   value="{{$item->blog_title}}"
-                                                   aria-label="Enter project name here"
-                                                   onchange="onChangeInput_edit(this,'tieu_de')"
-{{--                                                   pattern=".{1,60}"--}}
-                                                   title="Tiêu đề có độ dài không quá 60 ký tự"  required>
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="projectNameProjectSettingsLabel" class="input-label">Tiêu đề bài
+                                    viết
+                                </label>
+
+                                <div class="input-group input-group-merge">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="tio-briefcase-outlined"></i>
                                         </div>
                                     </div>
-                                    <!-- End Form Group -->
-                                </div>
-
-                                <div class="col-6">
-                                    <!-- Form Group -->
-                                    <div class="form-group">
-                                        <label for="projectNameProjectSettingsLabel" class="input-label">Slug <i
-                                                class="tio-help-outlined text-body ml-1" data-toggle="tooltip"
-                                                data-placement="top"
-                                                title=""
-                                                data-original-title="Displayed on public forums, such as Front."></i></label>
-
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">
-                                                    <i class="tio-briefcase-outlined"></i>
-                                                </div>
-                                            </div>
-                                            <input type="text" class="form-control" name="post_name"
-                                                   id="slug" placeholder="VD: file-cad"
-                                                   value="{{$item->blog_slug}}"
-                                                   aria-label="Enter project name here"
-                                                   title="Không được để trống" required>
-                                        </div>
-                                    </div>
-                                    <!-- End Form Group -->
+                                    <input type="text" class="form-control" name="tieu_de"
+                                           id="projectNameProjectSettingsLabel" placeholder="Tiêu đề"
+                                           value="{{$item->blog_title}}"
+                                           aria-label="Enter project name here"
+                                           onchange="onChangeInput_edit(this,'tieu_de')"
+                                           {{--                                                   pattern=".{1,60}"--}}
+                                           title="Tiêu đề có độ dài không quá 60 ký tự" required>
                                 </div>
                             </div>
+                            <!-- End Form Group -->
 
-                            <div class="row">
-                                <div class="col-6">
-                                    <!-- Form Group -->
-                                    <div class="form-group">
-                                        <label for="projectNameProjectSettingsLabel" class="input-label">Tác giả<i
-                                                class="tio-help-outlined text-body ml-1" data-toggle="tooltip"
-                                                data-placement="top"
-                                                title=""
-                                                data-original-title="Displayed on public forums, such as Front."></i></label>
 
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">
-                                                    <i class="tio-briefcase-outlined"></i>
-                                                </div>
-                                            </div>
-                                            <select name="tac_gia" id="projectNameProjectSettingsLabel"
-                                                    class="form-control">
-                                                <optgroup label="Tác giả">
-                                                    <option value="" disabled hidden>Chọn tác giả</option>
-                                                    @foreach($users as $user)
-                                                        @if($item->blog_author == $user->id)
-                                                            <option value="{{$user->id}}"
-                                                                    selected>{{$user->display_name}}</option>
-                                                        @else
-                                                            <option value="{{$user->id}}">{{$user->display_name}}</option>
-                                                        @endif
-                                                    @endforeach
-                                                </optgroup>
-                                            </select>
-                                            {{--                                <input type="number" class="form-control" name="tac_gia"--}}
-                                            {{--                                       id="projectNameProjectSettingsLabel" placeholder="Tác giả"--}}
-                                            {{--                                       aria-label="Enter project name here" >--}}
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="projectNameProjectSettingsLabel" class="input-label">Slug <i
+                                        class="tio-help-outlined text-body ml-1" data-toggle="tooltip"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="Displayed on public forums, such as Front."></i></label>
+
+                                <div class="input-group input-group-merge">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="tio-briefcase-outlined"></i>
                                         </div>
                                     </div>
-                                    <!-- End Form Group -->
-                                </div>
-
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="projectNameProjectSettingsLabel" class="input-label">Mô tả
-                                        </label>
-
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">
-                                                    <i class="tio-briefcase-outlined"></i>
-                                                </div>
-                                            </div>
-                                            <input type="text" class="form-control" name="mo_ta"
-                                                   value="{{$item->blog_content}}"
-                                                   id="projectNameProjectSettingsLabel" placeholder="Tóm tắt nội dung"
-{{--                                                   aria-label="Enter project name here" pattern=".{1,140}"--}}
-                                                   required>
-                                        </div>
-                                    </div>
-                                    <!-- End Form Group -->
+                                    <input type="text" class="form-control" name="post_name"
+                                           id="slug" placeholder="VD: file-cad"
+                                           value="{{$item->blog_slug}}"
+                                           aria-label="Enter project name here"
+                                           title="Không được để trống" required>
                                 </div>
                             </div>
+                            <!-- End Form Group -->
 
 
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="projectNameProjectSettingsLabel" class="input-label">Tác giả<i
+                                        class="tio-help-outlined text-body ml-1" data-toggle="tooltip"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="Displayed on public forums, such as Front."></i></label>
+
+                                <div class="input-group input-group-merge">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="tio-briefcase-outlined"></i>
+                                        </div>
+                                    </div>
+                                    <select name="tac_gia" id="projectNameProjectSettingsLabel"
+                                            class="form-control">
+                                        <optgroup label="Tác giả">
+                                            <option value="" disabled hidden>Chọn tác giả</option>
+                                            @foreach($users as $user)
+                                                @if($item->blog_author == $user->id)
+                                                    <option value="{{$user->id}}"
+                                                            selected>{{$user->display_name}}</option>
+                                                @else
+                                                    <option value="{{$user->id}}">{{$user->display_name}}</option>
+                                                @endif
+                                            @endforeach
+                                        </optgroup>
+                                    </select>
+                                    {{--                                <input type="number" class="form-control" name="tac_gia"--}}
+                                    {{--                                       id="projectNameProjectSettingsLabel" placeholder="Tác giả"--}}
+                                    {{--                                       aria-label="Enter project name here" >--}}
+                                </div>
+                            </div>
+                            <!-- End Form Group -->
+
+
+                            <div class="form-group">
+                                <label for="projectNameProjectSettingsLabel" class="input-label">Mô tả
+                                </label>
+
+                                <div class="input-group input-group-merge">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="tio-briefcase-outlined"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" name="mo_ta"
+                                           value="{{$item->blog_content}}"
+                                           id="projectNameProjectSettingsLabel" placeholder="Tóm tắt nội dung"
+                                           {{--                                                   aria-label="Enter project name here" pattern=".{1,140}"--}}
+                                           required>
+                                </div>
+                            </div>
+                            <!-- End Form Group -->
                         </div>
+
+
                     </div>
 
                 </div>
