@@ -23,7 +23,36 @@
 
         <section class="section-spacing blogs">
             <div class="container">
+                <div class="row justify-content-between align-items-center flex-grow-1">
+                    <div class="col-sm-6 col-md-4 mb-3 mb-sm-0">
+                        <form action="{{route('find_blog')}}" method="get" style="margin-bottom: 30px">
+                        @csrf
+                        <!-- Search -->
+                            <div class="input-group input-group-merge input-group-flush">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="tio-search"></i>
+                                    </div>
+                                </div>
+                                <input id="datatableSearch" type="search" class="form-control"
+                                       name="s"
+                                       placeholder="Tìm kiếm blog"
+                                       aria-label="Search users" style="height: auto">
+                                <button type="submit" class="btn btn-primary pt-1 pb-1 pr-2 pl-2" style="margin-left: 20px">Tìm kiếm</button>
+                            </div>
+                            <!-- End Search -->
+                        </form>
+                    </div>
 
+                </div>
+                @if(!empty($mess))
+                    <div class="alert alert-success d-flex align-items-center" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                        <div>
+                            {{$mess}}
+                        </div>
+                    </div>
+                @endif
                 <div class="row">
                     @foreach($blogs as $b)
                         <div class="col-md-6 col-lg-4 animate__animated animate__zoomIn">

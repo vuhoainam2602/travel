@@ -23,10 +23,7 @@
                         <!-- End Search -->
                     </form>
                 </div>
-                <div class="col-sm-6 col-md-4 mb-3 mb-sm-0 d-flex justify-content-end">
-                    <a href="{{Request::root()."/".'admin/them-user'}}" class="btn btn-primary pt-1 pb-1 pr-2 pl-2">Thêm
-                        mới</a>
-                </div>
+
             </div>
             <!-- End Row -->
         </div>

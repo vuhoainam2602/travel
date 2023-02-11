@@ -45,6 +45,8 @@ Route::prefix('/admin')->group(function () {
     Route::get('/sua-tour/{id}', 'Admin\LichTrinhController@suaTour')->name('suaTour');
     Route::post('/sua-tour', 'Admin\LichTrinhController@updateTour')->name('updateTour');
     Route::get('xoa-tour/{id}', 'Admin\LichTrinhController@xoaTour')->name('xoaTour');
+    Route::get('/find-tour', 'TourController@find_tour')->name('find_tour');
+    Route::get('/find-blog', 'BlogController@find_blog')->name('find_blog');
     Route::get('/index-contact', 'ContactController@danhSachLienHe')->name('danhSachLH');
 });
 Route::prefix('/')->group(function () {
